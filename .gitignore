@@ -1,0 +1,6 @@
+# Project exclude paths
+/duolaimall-common/common-service/target/
+/duolaimall-common/common-util/target/
+/duolaimall-gateway/target/
+/duolaimall-product/product-api/target/
+/duolaimall-product/product-service/target/
