@@ -27,9 +27,9 @@ import java.util.UUID;
 public class FileServiceImpl implements FileService {
 
     @Autowired
-    MinioConfiguration minioConfiguration;
+    private MinioConfiguration minioConfiguration;
     @Autowired
-    MinioClient minioClient;
+    private MinioClient minioClient;
 
     private static final long partSize = -1;
 

@@ -24,7 +24,7 @@ import java.util.List;
 public class AdminPlatformController {
 
     @Autowired
-    PlatformAttributeService platformAttributeService;
+    private PlatformAttributeService platformAttributeService;
 
     @GetMapping("/attrInfoList/{firstLevelCategoryId}/{secondLevelCategoryId}/{thirdLevelCategoryId}")
     public Result<List<PlatformAttributeInfoDTO>> getPlatformAttributeInfoList(

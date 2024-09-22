@@ -29,13 +29,13 @@ import java.util.List;
 public class PlatformAttributeServiceImpl implements PlatformAttributeService {
 
     @Autowired
-    PlatformAttrInfoMapper platformAttrInfoMapper;
+    private PlatformAttrInfoMapper platformAttrInfoMapper;
     @Autowired
-    PlatformAttrValueMapper platformAttrValueMapper;
+    private PlatformAttrValueMapper platformAttrValueMapper;
     @Autowired
-    PlatformAttributeInfoConverter platformAttributeInfoConverter;
+    private PlatformAttributeInfoConverter platformAttributeInfoConverter;
     @Autowired
-    PlatformAttributeInfoParamConverter platformAttributeInfoParamConverter;
+    private PlatformAttributeInfoParamConverter platformAttributeInfoParamConverter;
 
     /**
      * 根据分类Id 获取平台属性数据

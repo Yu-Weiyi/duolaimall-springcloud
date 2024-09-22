@@ -30,13 +30,13 @@ import java.util.List;
 public class CategoryServiceImpl implements CategoryService {
 
     @Autowired
-    FirstLevelCategoryMapper firstLevelCategoryMapper;
+    private FirstLevelCategoryMapper firstLevelCategoryMapper;
     @Autowired
-    SecondLevelCategoryMapper secondLevelCategoryMapper;
+    private SecondLevelCategoryMapper secondLevelCategoryMapper;
     @Autowired
-    ThirdLevelCategoryMapper thirdLevelCategoryMapper;
+    private ThirdLevelCategoryMapper thirdLevelCategoryMapper;
     @Autowired
-    CategoryConverter categoryConverter;
+    private CategoryConverter categoryConverter;
 
     /**
      * 查询所有的一级分类信息

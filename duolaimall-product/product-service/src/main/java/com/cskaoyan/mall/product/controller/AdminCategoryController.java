@@ -27,7 +27,7 @@ import java.util.List;
 public class AdminCategoryController {
 
     @Autowired
-    CategoryService categoryService;
+    private CategoryService categoryService;
 
     @GetMapping("/getCategory1")
     public Result<List<FirstLevelCategoryDTO>> getCategory1() {

@@ -27,7 +27,7 @@ import java.security.NoSuchAlgorithmException;
 public class AdminFileUploadController {
 
     @Autowired
-    FileService fileService;
+    private FileService fileService;
 
     @PostMapping("/fileUpload")
     public Result<String> fileUpload(MultipartFile file) throws ServerException, InsufficientDataException, ErrorResponseException, IOException, NoSuchAlgorithmException, InvalidKeyException, InvalidResponseException, XmlParserException, InternalException {
