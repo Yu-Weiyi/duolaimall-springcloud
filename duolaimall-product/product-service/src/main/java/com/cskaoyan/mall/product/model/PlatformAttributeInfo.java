@@ -3,7 +3,9 @@ package com.cskaoyan.mall.product.model;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.cskaoyan.mall.common.model.BaseEntity;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
@@ -15,6 +17,8 @@ import java.util.List;
  */
 @Data
 @TableName("platform_attr_info")
+@NoArgsConstructor
+@AllArgsConstructor
 public class PlatformAttributeInfo extends BaseEntity {
 
 	private static final long serialVersionUID = 1L;

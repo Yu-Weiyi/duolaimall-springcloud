@@ -2,12 +2,10 @@ package com.cskaoyan.mall.product.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.cskaoyan.mall.product.model.PlatformAttributeInfo;
-import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
-@Mapper
 public interface PlatformAttrInfoMapper extends BaseMapper<PlatformAttributeInfo> {
 
     /**
@@ -16,6 +14,6 @@ public interface PlatformAttrInfoMapper extends BaseMapper<PlatformAttributeInfo
     List<PlatformAttributeInfo> selectPlatFormAttrInfoList(@Param("firstLevelCategoryId") Long firstLevelCategoryId
             , @Param("secondLevelCategoryId") Long secondLevelCategoryId, @Param("thirdLevelCategoryId") Long thirdLevelCategoryId);
 
-    List<PlatformAttributeInfo> selectPlatformAttrInfoListBySkuId(@Param("skuId") Long skuId);
+//    List<PlatformAttributeInfo> selectPlatformAttrInfoListBySkuId(@Param("skuId") Long skuId);
 
 }
