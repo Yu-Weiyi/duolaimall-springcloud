@@ -5,7 +5,9 @@ package com.cskaoyan.mall.product.model;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.cskaoyan.mall.common.model.BaseEntity;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * <p>
@@ -14,6 +16,8 @@ import lombok.Data;
  *
  */
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 @TableName("category_trademark")
 public class CategoryTrademark extends BaseEntity {
 
