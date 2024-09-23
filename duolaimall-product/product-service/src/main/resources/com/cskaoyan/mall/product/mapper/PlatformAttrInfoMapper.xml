@@ -5,17 +5,11 @@
 
 
     <resultMap id="infoMap" type="com.cskaoyan.mall.product.model.PlatformAttributeInfo">
-
         <id column="id" property="id"/>
         <result column="attr_name" property="attrName"/>
         <result column="category_id" property="categoryId"/>
         <result column="category_level" property="categoryLevel"/>
-
-        <collection property="attrValueList" ofType="com.cskaoyan.mall.product.model.PlatformAttributeValue">
-            <id column="bid" property="id"/>
-            <result column="value_name" property="valueName"/>
-            <result column="attr_id" property="attrId"/>
-        </collection>
+        <association property="attrValueList" javaType="java.util.List" resultSet="com.cskaoyan.mall.product.model.PlatformAttributeValue"/>
     </resultMap>
 
     <select id="selectPlatFormAttrInfoList" resultMap="infoMap">

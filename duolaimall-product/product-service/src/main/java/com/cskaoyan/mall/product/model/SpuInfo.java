@@ -41,10 +41,10 @@ public class SpuInfo extends BaseEntity {
 
 	// 商品的图片集合
 	@TableField(exist = false)
-	private List<SpuImage> SpuImageList;
+	private List<SpuImage> spuImageList;
 
 	// 商品的海报图片集合
 	@TableField(exist = false)
-	private List<SpuPoster> SpuPosterList;
+	private List<SpuPoster> spuPosterList;
 }
 

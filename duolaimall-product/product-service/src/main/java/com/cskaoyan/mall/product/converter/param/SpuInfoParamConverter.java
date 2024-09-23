@@ -1,11 +1,7 @@
 package com.cskaoyan.mall.product.converter.param;
 
-import com.cskaoyan.mall.product.dto.SpuPosterDTO;
 import com.cskaoyan.mall.product.model.*;
-import com.cskaoyan.mall.product.query.SpuImageParam;
-import com.cskaoyan.mall.product.query.SpuInfoParam;
-import com.cskaoyan.mall.product.query.SpuSaleAttributeInfoParam;
-import com.cskaoyan.mall.product.query.SpuSaleAttributeValueParam;
+import com.cskaoyan.mall.product.query.*;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
@@ -20,6 +16,9 @@ public interface SpuInfoParamConverter {
 
     SpuImage spuImageParam2Image(SpuImageParam spuImage);
     List<SpuImage> spuImageParams2Images(List<SpuImageParam> spuImages);
+
+    SpuPoster spuPosterParam2Poster(SpuPosterParam spuPoster);
+    List<SpuPoster> spuPosterParams2Posters(List<SpuPosterParam> spuPosters);
 
     @Mapping(source = "baseSaleAttrId", target = "saleAttrId")
     SpuSaleAttributeInfo spuSaleAttributeParam2Info(SpuSaleAttributeInfoParam spuSaleAttributeInfo);

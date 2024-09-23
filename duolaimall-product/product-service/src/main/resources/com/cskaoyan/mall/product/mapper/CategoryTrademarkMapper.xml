@@ -18,7 +18,7 @@
     </select>
 
     <select id="selectTrademarkListExcludedByThirdLevelCategoryId" resultType="com.cskaoyan.mall.product.model.Trademark">
-        SELECT
+        SELECT DISTINCT
             t.id,
             t.tm_name,
             t.logo_url
