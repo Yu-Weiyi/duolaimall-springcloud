@@ -9,8 +9,9 @@
         <result column="sale_attr_id" property="saleAttrId"/>
         <result column="sale_attr_name" property="saleAttrName"/>
         <collection property="spuSaleAttrValueList" ofType="com.cskaoyan.mall.product.model.SpuSaleAttributeValue">
+            <id column="vid" property="id"/>
             <result column="spu_id" property="spuId"/>
-            <result column="vid" property="spuSaleAttrId"/>
+            <result column="iid" property="spuSaleAttrId"/>
             <result column="spu_sale_attr_value_name" property="spuSaleAttrValueName"/>
         </collection>
     </resultMap>

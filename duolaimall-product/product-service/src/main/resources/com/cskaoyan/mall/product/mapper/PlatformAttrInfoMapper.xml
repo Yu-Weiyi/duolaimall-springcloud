@@ -9,7 +9,11 @@
         <result column="attr_name" property="attrName"/>
         <result column="category_id" property="categoryId"/>
         <result column="category_level" property="categoryLevel"/>
-        <association property="attrValueList" javaType="java.util.List" resultSet="com.cskaoyan.mall.product.model.PlatformAttributeValue"/>
+        <collection property="attrValueList" ofType="com.cskaoyan.mall.product.model.PlatformAttributeValue">
+            <id column="bid" property="id"/>
+            <result column="value_name" property="valueName"/>
+            <result column="attr_id" property="attrId"/>
+        </collection>
     </resultMap>
 
     <select id="selectPlatFormAttrInfoList" resultMap="infoMap">
@@ -28,13 +32,13 @@
         AND b.is_deleted = 0
         <where>
             <if test="firstLevelCategoryId != 0">
-                OR ( category_id = 2 AND category_level = 1 )
+                OR ( category_id = #{firstLevelCategoryId} AND category_level = 1 )
             </if>
             <if test="secondLevelCategoryId != 0">
-                OR ( category_id = 13 AND category_level = 2 )
+                OR ( category_id = #{secondLevelCategoryId} AND category_level = 2 )
             </if>
             <if test="thirdLevelCategoryId != 0">
-                OR ( category_id = 61 AND category_level = 3 );
+                OR ( category_id = #{thirdLevelCategoryId} AND category_level = 3 );
             </if>
         </where>
     </select>

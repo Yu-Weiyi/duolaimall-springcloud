@@ -16,7 +16,7 @@ public interface SkuService {
     /*
          保存SKU
      */
-    void saveSkuInfo(SkuInfoParam skuInfo);
+    void saveSkuInfo(SkuInfoParam skuInfoParam);
 
     /*
          根据分页参数查询SKU分页数据

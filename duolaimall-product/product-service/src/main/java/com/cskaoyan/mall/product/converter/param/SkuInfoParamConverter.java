@@ -11,6 +11,8 @@ import com.cskaoyan.mall.product.query.SkuSaleAttributeValueParam;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
+import java.util.List;
+
 @Mapper(componentModel = "spring")
 public interface SkuInfoParamConverter {
 
@@ -20,10 +22,12 @@ public interface SkuInfoParamConverter {
     SkuInfo SkuInfoParam2Info(SkuInfoParam skuInfoParam);
 
     SkuImage skuImageParam2Image(SkuImageParam skuImageParam);
+    List<SkuImage> skuImageParams2Images(List<SkuImageParam> skuImageParamList);
 
     SkuPlatformAttributeValue skuPlatformAttributeValueParam2Value(SkuPlatformAttributeValueParam param);
+    List<SkuPlatformAttributeValue> skuPlatformAttributeValueParams2Values(List<SkuPlatformAttributeValueParam> param);
 
     @Mapping(source = "saleAttrValueId", target = "spuSaleAttrValueId")
     SkuSaleAttributeValue skuSaleAttributeValueParam2Value(SkuSaleAttributeValueParam param);
-
+    List<SkuSaleAttributeValue> skuSaleAttributeValueParams2Values(List<SkuSaleAttributeValueParam> param);
 }

@@ -67,7 +67,7 @@ public class SpuServiceImpl implements SpuService {
     }
 
     @Override
-    @Transactional
+    @Transactional(rollbackFor = Exception.class)
     public void saveSpuInfo(SpuInfoParam spuInfoParam) {
 
         SpuInfo spuInfo = spuInfoParamConverter.spuInfoParam2Info(spuInfoParam);
